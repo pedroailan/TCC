@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/TCC.PostgresSQL.Consumer/Metrics/output20241008.csv
+/TCC.Rabbit.Consumer/Metrics/output20241008.csv
+/TCC.PostgreSQL.Producer/Metrics/output20241008.csv
+/TCC.Rabbit.Producer/Metrics/output20241008.csv
