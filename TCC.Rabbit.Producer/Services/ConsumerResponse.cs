@@ -1,32 +1,30 @@
-﻿using Microsoft.AspNetCore.Connections;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
 using TCC.Commons;
 
-namespace TCC.Rabbit.Consumer.Services;
+namespace TCC.Rabbit.Producer.Services;
 
-public class Consumer
+public class ConsumerResponse
 {
     private readonly IConnection _connection;
     private readonly IModel _channel;
-    private readonly Response _response;
-    private readonly ILogger<Consumer> _logger;
+    private readonly ILogger<ConsumerResponse> _logger;
 
-    public Consumer(IConfiguration configuration, Response response, ILogger<Consumer> logger)
+    public ConsumerResponse(IConfiguration configuration, ILogger<ConsumerResponse> logger)
     {
         _logger = logger;
 
         ConnectionFactory factory = Builder.Build(configuration);
         _connection = factory.CreateConnection();
         _channel = _connection.CreateModel();
-        _channel.QueueDeclare(queue: "api_queue",
+        _channel.QueueDeclare(queue: "api_queue_response",
                              durable: false,
                              exclusive: false,
                              autoDelete: false,
                              arguments: null);
-        _response = response;
+
     }
 
     public void StartConsuming()
@@ -43,15 +41,15 @@ public class Consumer
 
             long latency = message.CalculateTime(receivedTimestamp);
 
-            _response.Notification(message);
+
             _logger.LogInformation("{Message};{Line}", DateTime.Now.ToString("HH:mm:ss:fff"), latency);
         };
-        _channel.BasicConsume(queue: "api_queue",
+        _channel.BasicConsume(queue: "api_queue_response",
                              autoAck: true,
                              consumer: consumer);
     }
 
-    ~Consumer()
+    ~ConsumerResponse()
     {
         _channel?.Close();
         _connection?.Close();
