@@ -1,5 +1,6 @@
 using Prometheus;
 using System.Collections.Generic;
+using TCC.Commons;
 using TCC.PostgreSQL.Producer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Logging.AddLogs();
 builder.Services.AddSingleton<Producer>();
 builder.Services.AddSingleton<ConsumerResponse>();
 builder.Services.AddHostedService<Job>();
