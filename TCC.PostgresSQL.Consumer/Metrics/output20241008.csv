@@ -1,134 +1,4 @@
 No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-Hosting failed to start
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 193.4276ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 6.0745ms
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 56.1928ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 16.5873ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 141.6214ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 4.895ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 40.2685ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 18.0284ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 134.3861ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 4.0178ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 34.7151ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 16.3433ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 137.3ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 5.0579ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.0659ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 16.3997ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/metrics""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/metrics""" - 200 null "text/plain; version=0.0.4; charset=utf-8" 101.9565ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/favicon.ico""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/favicon.ico""" - 404 0 null 21.5127ms
-Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7126""""/favicon.ico", Response status code: 404
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 1.3432ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-"19:17:27:513";"Conexão aberta com sucesso!"
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 154.7082ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 3.9717ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 32.9653ms
-Request starting "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/2" "GET" "https"://"localhost:7126""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 16.0362ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-"Conexão aberta com sucesso!"
-Now listening on: "https://localhost:7126"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-"Conexão aberta com sucesso!"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger""" - 301 0 null 126.6129ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/index.html""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 47.1358ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui.css""" - null null
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui-standalone-preset.js""" - null null
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui-bundle.js""" - null null
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/_vs/browserLink""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 5.3692ms
-Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
-Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui-standalone-preset.js""" - 200 339486 "text/javascript" 55.9839ms
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui.css""" - 200 143943 "text/css" 58.0279ms
-Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/swagger-ui-bundle.js""" - 200 1096145 "text/javascript" 59.6746ms
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 45.6087ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 15.4845ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/favicon-32x32.png""" - null null
-Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 0.8901ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-"Conexão aberta com sucesso!"
-Now listening on: "http://localhost:5162"
-Application started. Press Ctrl+C to shut down.
-Hosting environment: "Development"
-Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/index.html""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 160.6759ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/_framework/aspnetcore-browser-refresh.js""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/_framework/aspnetcore-browser-refresh.js""" - 200 13782 "application/javascript; charset=utf-8" 2.6843ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/_vs/browserLink""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 43.1232ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/v1/swagger.json""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 17.3721ms
-No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
 "Conexão aberta com sucesso!"
 Now listening on: "http://localhost:5162"
 Application started. Press Ctrl+C to shut down.
@@ -136,7 +6,14 @@ Hosting environment: "Development"
 Content root path: "C:\TCC2\TCC\TCC.PostgresSQL.Consumer"
 Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/metrics""" - null null
 Failed to determine the https port for redirect.
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/metrics""" - 200 null "text/plain; version=0.0.4; charset=utf-8" 192.8295ms
-Request starting "HTTP/1.1" "GET" "http"://"localhost:5162""""/favicon.ico""" - null null
-Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/favicon.ico""" - 404 0 null 22.5261ms
-Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5162""""/favicon.ico", Response status code: 404
+Request finished "HTTP/1.1" "GET" "http"://"localhost:5162""""/metrics""" - 200 null "text/plain; version=0.0.4; charset=utf-8" 220.1117ms
+"19:36:28:877";1717
+"19:36:29:965";187
+"19:36:29:965";153
+"19:36:31:135";177
+"19:36:32:363";221
+"19:36:33:541";167
+"19:36:34:675";134
+"19:36:35:849";160
+"19:36:37:076";220
+"19:36:38:223";135

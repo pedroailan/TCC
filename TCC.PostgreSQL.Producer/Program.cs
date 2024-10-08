@@ -1,3 +1,7 @@
+using Prometheus;
+using System.Collections.Generic;
+using TCC.PostgreSQL.Producer.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,18 +11,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddSingleton<Producer>();
+builder.Services.AddSingleton<ConsumerResponse>();
+builder.Services.AddHostedService<Job>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<ConsumerResponse>());
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+var app = builder.Build();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseMetricServer();
+app.UseHttpMetrics();
+
 
 app.MapControllers();
 

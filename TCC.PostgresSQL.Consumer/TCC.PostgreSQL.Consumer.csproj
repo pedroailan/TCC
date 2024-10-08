@@ -16,4 +16,8 @@
     <ProjectReference Include="..\TCC.Commons\TCC.Commons.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Metrics\" />
+  </ItemGroup>
+
 </Project>
