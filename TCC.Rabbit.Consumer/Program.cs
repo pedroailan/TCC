@@ -1,25 +1,29 @@
+using Prometheus;
+using TCC.Commons;
+using TCC.Rabbit.Consumer.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Logging.AddLogs();
+builder.Services.AddSingleton<Consumer>();
+builder.Services.AddSingleton<Response>();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+var app = builder.Build();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseMetricServer();
+app.UseHttpMetrics();
+
 app.MapControllers();
+
+Consumer consumer = app.Services.GetRequiredService<Consumer>();
+consumer.StartConsuming();
 
 app.Run();
