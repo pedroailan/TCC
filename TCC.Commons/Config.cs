@@ -2,6 +2,6 @@
 {
     public class Config
     {
-        public static readonly TimeSpan Interval = TimeSpan.FromMilliseconds(1000);
+        public static readonly TimeSpan Interval = TimeSpan.FromMilliseconds(15);
     }
 }
