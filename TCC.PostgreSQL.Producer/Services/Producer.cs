@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using Prometheus;
 using System.Text.Json;
 using TCC.Commons;
 
@@ -8,6 +9,7 @@ public class Producer(IConfiguration configuration, ILogger<Producer> logger)
 {
     private readonly IConfiguration _configuration = configuration;
     private readonly ILogger<Producer> _logger = logger;
+    private static readonly Counter _messagesRequestsCounter = Metrics.CreateCounter("messages_request_total", "Total number of successful requests.");
 
     public async Task Notification(Notification notification)
     {
@@ -24,6 +26,7 @@ public class Producer(IConfiguration configuration, ILogger<Producer> logger)
             using var cmd = new NpgsqlCommand($"NOTIFY Channel01, '{JsonSerializer.Serialize(notification)}'", conn);
 
             await cmd.ExecuteNonQueryAsync();
+            _messagesRequestsCounter.Inc();
         }
         catch (Exception ex)
         {

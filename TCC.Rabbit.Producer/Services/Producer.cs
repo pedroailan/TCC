@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using Prometheus;
+using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
 using TCC.Commons;
@@ -9,6 +10,7 @@ public class Producer : IDisposable
 {
     private readonly IConnection _connection;
     private readonly IModel _channel;
+    private static readonly Counter _messagesRequestsCounter = Metrics.CreateCounter("messages_request_total", "Total number of successful requests.");
 
     public Producer(IConfiguration configuration)
     {
@@ -22,15 +24,18 @@ public class Producer : IDisposable
                              arguments: null);
     }
 
-    public void Notification(Notification notification)
+    public async Task Notification(Notification notification)
     {
         var messageBody = JsonSerializer.Serialize(notification);
         var body = Encoding.UTF8.GetBytes(messageBody);
 
-        _channel.BasicPublish(exchange: "",
-                             routingKey: "api_queue",
-                             basicProperties: null,
-                             body: body);
+        await Task.Run(() =>
+            _channel.BasicPublish(exchange: "",
+                                 routingKey: "api_queue",
+                                 basicProperties: null,
+                                 body: body)
+        );
+        _messagesRequestsCounter.Inc();
     }
 
     public void Dispose()

@@ -12,7 +12,7 @@ public class Job(Producer producer) : BackgroundService
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            _producer.Notification(new Notification());
+            await _producer.Notification(new Notification());
             await Task.Delay(Config.Interval, stoppingToken);
         }
     }
