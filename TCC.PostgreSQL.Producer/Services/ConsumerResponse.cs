@@ -1,4 +1,6 @@
 ﻿using Npgsql;
+using Prometheus;
+using System.Diagnostics;
 using System.Text.Json;
 using TCC.Commons;
 
@@ -8,6 +10,13 @@ public class ConsumerResponse(IConfiguration configuration, ILogger<ConsumerResp
 {
     private readonly IConfiguration _configuration = configuration;
     private readonly ILogger<ConsumerResponse> _logger = logger;
+    private static readonly Histogram _latencyHistogram = Metrics.CreateHistogram(
+        "app_operation_latency_milliseconds", 
+        "Latência da operação em segundos",
+        new HistogramConfiguration
+        {
+            Buckets = Histogram.ExponentialBuckets(1, 2, 10)
+        });
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -30,7 +39,7 @@ public class ConsumerResponse(IConfiguration configuration, ILogger<ConsumerResp
 
                 long latency = message.CalculateTime(receivedTimestamp);
 
-                _logger.LogInformation("{Message};{Line}", DateTime.Now.ToString("HH:mm:ss:fff"), latency);
+                _latencyHistogram.Observe(latency);
             };
 
             while (true)

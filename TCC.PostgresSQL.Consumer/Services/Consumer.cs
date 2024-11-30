@@ -38,7 +38,6 @@ public class Consumer(IConfiguration configuration, Response response, ILogger<C
                 long latency = message.CalculateTime(receivedTimestamp);
 
                 await _response.Notification(message);
-                _logger.LogInformation("{Message};{Line}", DateTime.Now.ToString("HH:mm:ss:fff"), latency);
             };
 
             while (true)

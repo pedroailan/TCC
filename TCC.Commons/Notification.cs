@@ -10,7 +10,7 @@ namespace TCC.Commons
             Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
             Date = DateTime.UtcNow;
 
-            byte[] bytes = new byte[byte.MaxValue];
+            byte[] bytes = [];
             RandomNumberGenerator.Fill(bytes);
             File = bytes;
         }

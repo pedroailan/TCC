@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using Prometheus;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
@@ -11,6 +12,13 @@ public class ConsumerResponse
     private readonly IConnection _connection;
     private readonly IModel _channel;
     private readonly ILogger<ConsumerResponse> _logger;
+    private static readonly Histogram _latencyHistogram = Metrics.CreateHistogram(
+        "app_operation_latency_milliseconds",
+        "Latência da operação em segundos",
+        new HistogramConfiguration
+        {
+            Buckets = Histogram.ExponentialBuckets(1, 2, 10)
+        });
 
     public ConsumerResponse(IConfiguration configuration, ILogger<ConsumerResponse> logger)
     {
@@ -24,7 +32,6 @@ public class ConsumerResponse
                              exclusive: false,
                              autoDelete: false,
                              arguments: null);
-
     }
 
     public void StartConsuming()
@@ -32,17 +39,18 @@ public class ConsumerResponse
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += (model, ea) =>
         {
-            var body = ea.Body.ToArray();
-            var str = Encoding.UTF8.GetString(body);
+            Task.Run(() =>
+            {
+                var body = ea.Body.ToArray();
+                var str = Encoding.UTF8.GetString(body);
 
-            Notification message = JsonSerializer.Deserialize<Notification>(str);
+                Notification message = JsonSerializer.Deserialize<Notification>(str);
 
-            long receivedTimestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                long receivedTimestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                long latency = message.CalculateTime(receivedTimestamp);
 
-            long latency = message.CalculateTime(receivedTimestamp);
-
-
-            _logger.LogInformation("{Message};{Line}", DateTime.Now.ToString("HH:mm:ss:fff"), latency);
+                _latencyHistogram.Observe(latency);
+            });
         };
         _channel.BasicConsume(queue: "api_queue_response",
                              autoAck: true,

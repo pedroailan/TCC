@@ -16,7 +16,7 @@
       "launchUrl": "metrics",
       "applicationUrl": "http://localhost:5014",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Production"
       }
     }
   }

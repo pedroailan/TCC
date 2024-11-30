@@ -34,17 +34,18 @@ public class Consumer
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += (model, ea) =>
         {
-            var body = ea.Body.ToArray();
-            var str = Encoding.UTF8.GetString(body);
+            Task.Run(() =>
+            {
+                var body = ea.Body.ToArray();
+                var str = Encoding.UTF8.GetString(body);
 
-            Notification message = JsonSerializer.Deserialize<Notification>(str);
+                Notification message = JsonSerializer.Deserialize<Notification>(str);
 
-            long receivedTimestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                long receivedTimestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+                long latency = message.CalculateTime(receivedTimestamp);
 
-            long latency = message.CalculateTime(receivedTimestamp);
-
-            _response.Notification(message);
-            _logger.LogInformation("{Message};{Line}", DateTime.Now.ToString("HH:mm:ss:fff"), latency);
+                _response.Notification(message);
+            });
         };
         _channel.BasicConsume(queue: "api_queue",
                              autoAck: true,
