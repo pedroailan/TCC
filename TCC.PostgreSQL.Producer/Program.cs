@@ -1,5 +1,4 @@
 using Prometheus;
-using System.Collections.Generic;
 using TCC.Commons;
 using TCC.PostgreSQL.Producer.Services;
 

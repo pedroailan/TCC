@@ -1,6 +1,6 @@
 ﻿using RabbitMQ.Client;
-using System.Text.Json;
 using System.Text;
+using System.Text.Json;
 using TCC.Commons;
 
 namespace TCC.Rabbit.Consumer.Services;
